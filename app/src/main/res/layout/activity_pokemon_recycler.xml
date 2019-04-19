@@ -12,9 +12,9 @@
         android:background="@color/colorPrimary"
         android:elevation="5dp"/>
 
-    <ListView
-        android:id="@+id/listViewMyPokemons"
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerViewMyPokemons"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-    </ListView>
+    </android.support.v7.widget.RecyclerView>
 </LinearLayout>
