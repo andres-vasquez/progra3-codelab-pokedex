@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">CodelabPokedex</string>
+    <string name="app_name">Codelab Pokedex</string>
+    <string name="main_activity_title">POKEDEX</string>
+    <string name="main_activity_welcome_message">Bienvenido a tu Pokedex!</string>
+    <string name="main_activity_instructions">Para comenzar, abre el repositorio en GitHub y sigue las instrucciones para armar tu app de Pokedex!</string>
+    <string name="drawer_open">Open Drawer</string>
+    <string name="drawer_close">Close Drawer</string>
 </resources>
