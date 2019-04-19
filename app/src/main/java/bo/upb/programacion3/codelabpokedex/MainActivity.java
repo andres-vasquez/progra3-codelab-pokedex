@@ -13,18 +13,15 @@ import android.view.View;
 public class MainActivity extends AppCompatActivity {
 
     // Elementos de la pantalla
-    Toolbar toolbar; // Usaremos un toolbar personalizado, para agregar el icono del Drawer a la izquierda
-    ActionBarDrawerToggle drawerToggle; // El objeto del botón del drawer
-    DrawerLayout drawerLayout; // Nuestro DrawerLayout
+    private Toolbar toolbar; // Usaremos un toolbar personalizado, para agregar el icono del Drawer a la izquierda
+    private ActionBarDrawerToggle drawerToggle; // El objeto del botón del drawer
+    private DrawerLayout drawerLayout; // Nuestro DrawerLayout
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        // Esto ya saben!
-        this.toolbar = findViewById(R.id.toolbar);
-        this.drawerLayout = findViewById(R.id.navigationDrawer);
+        initViews();
 
         if (this.toolbar != null) {
             // Aqui configuramos nuestro Toolbar, con el ícono del Drawer a la izquierda
@@ -41,6 +38,12 @@ public class MainActivity extends AppCompatActivity {
                 }
             });
         }
+    }
+
+    // Esto ya saben!
+    private void initViews() {
+        this.toolbar = findViewById(R.id.toolbar);
+        this.drawerLayout = findViewById(R.id.navigationDrawer);
     }
 
     public void goToMyPokemons(View view) {
