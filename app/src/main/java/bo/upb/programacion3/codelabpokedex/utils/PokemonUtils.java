@@ -10,7 +10,6 @@ public class PokemonUtils {
 
     /**
      * Get list of pokemons
-     *
      * @return List of pokemons in the pokedex
      */
     public static List<Pokemon> getPokemons() {

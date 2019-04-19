@@ -10,12 +10,14 @@ import android.view.ViewGroup;
 import java.util.List;
 
 import bo.upb.programacion3.codelabpokedex.R;
+import bo.upb.programacion3.codelabpokedex.callback.PokemonCallback;
 import bo.upb.programacion3.codelabpokedex.model.Pokemon;
 
 public class PokemonRecyclerViewAdapter extends RecyclerView.Adapter<PokemonViewHolder> {
 
     private List<Pokemon> pokemonList;
     private LayoutInflater inflater;
+    private PokemonCallback pokemonCallback;
 
     public PokemonRecyclerViewAdapter(Context context, List<Pokemon> pokemonList) {
         this.pokemonList = pokemonList;
@@ -31,14 +33,26 @@ public class PokemonRecyclerViewAdapter extends RecyclerView.Adapter<PokemonView
 
     @Override
     public void onBindViewHolder(@NonNull PokemonViewHolder pokemonViewHolder, int position) {
-        Pokemon pokemon = this.pokemonList.get(position);
+        final Pokemon pokemon = this.pokemonList.get(position);
         pokemonViewHolder.imageView.setImageResource(pokemon.getImage());
         pokemonViewHolder.textViewName.setText(pokemon.getName());
         pokemonViewHolder.textViewType.setText(pokemon.getType());
+        pokemonViewHolder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (pokemonCallback != null) {
+                    pokemonCallback.onPokemonClick(pokemon);
+                }
+            }
+        });
     }
 
     @Override
     public int getItemCount() {
         return this.pokemonList.size();
+    }
+
+    public void setPokemonCallback(PokemonCallback pokemonCallback) {
+        this.pokemonCallback = pokemonCallback;
     }
 }
