@@ -14,12 +14,10 @@ import bo.upb.programacion3.codelabpokedex.model.Pokemon;
 
 public class PokemonRecyclerViewAdapter extends RecyclerView.Adapter<PokemonViewHolder> {
 
-    private Context context;
     private List<Pokemon> pokemonList;
     private LayoutInflater inflater;
 
     public PokemonRecyclerViewAdapter(Context context, List<Pokemon> pokemonList) {
-        this.context = context;
         this.pokemonList = pokemonList;
         this.inflater = LayoutInflater.from(context);
     }
