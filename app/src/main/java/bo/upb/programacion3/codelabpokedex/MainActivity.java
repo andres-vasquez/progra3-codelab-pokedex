@@ -1,5 +1,6 @@
 package bo.upb.programacion3.codelabpokedex;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.view.GravityCompat;
@@ -40,5 +41,15 @@ public class MainActivity extends AppCompatActivity {
                 }
             });
         }
+    }
+
+    public void goToMyPokemons(View view) {
+        Intent intent = new Intent();
+        startActivity(intent);
+    }
+
+    public void goToMyFavoritePokemons(View view) {
+        Intent intent = new Intent();
+        startActivity(intent);
     }
 }
