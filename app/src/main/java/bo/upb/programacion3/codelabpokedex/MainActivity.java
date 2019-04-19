@@ -11,19 +11,22 @@ import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
 
-    Toolbar toolbar;
-    ActionBarDrawerToggle drawerToggle;
-    DrawerLayout drawerLayout;
+    // Elementos de la pantalla
+    Toolbar toolbar; // Usaremos un toolbar personalizado, para agregar el icono del Drawer a la izquierda
+    ActionBarDrawerToggle drawerToggle; // El objeto del botón del drawer
+    DrawerLayout drawerLayout; // Nuestro DrawerLayout
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // Esto ya saben!
         this.toolbar = findViewById(R.id.toolbar);
         this.drawerLayout = findViewById(R.id.navigationDrawer);
 
         if (this.toolbar != null) {
+            // Aqui configuramos nuestro Toolbar, con el ícono del Drawer a la izquierda
             this.toolbar.setTitle(R.string.main_activity_title);
             this.toolbar.setTitleTextColor(ContextCompat.getColor(this, R.color.colorWhite));
 
@@ -33,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
             drawerToggle.setToolbarNavigationClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    drawerLayout.openDrawer(GravityCompat.START);
+                    drawerLayout.openDrawer(GravityCompat.START); // Podemos abrir y cerrar nuestro drawer programáticamente!!
                 }
             });
         }

@@ -6,11 +6,15 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
+    <!-- Drawer Layout encargado de manejar el Navigation Drawer-->
     <android.support.v4.widget.DrawerLayout
         android:id="@+id/navigationDrawer"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <!--Acepta sólo dos elementos hijos-->
+
+        <!-- El layout principal (Pantalla principal) -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -65,6 +69,10 @@
             </FrameLayout>
 
         </LinearLayout>
+
+        <!-- Y como segundo elemento, acepta un Navigation View -->
+        <!-- Este navigation view es el layout que se oculta -->
+        <!-- Acepta los mismos atributos que un FrameLayout -->
 
         <android.support.design.widget.NavigationView
             android:layout_width="match_parent"
