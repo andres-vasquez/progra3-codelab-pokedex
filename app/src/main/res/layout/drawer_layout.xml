@@ -10,12 +10,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="?attr/selectableItemBackground"
-        android:text="@string/drawer_button_my_pokemons" />
+        android:text="@string/drawer_button_my_pokemons"
+        android:onClick="goToMyPokemons"/>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="?attr/selectableItemBackground"
-        android:text="@string/drawer_button_my_favorites" />
+        android:text="@string/drawer_button_my_favorites"
+        android:onClick="goToMyFavoritePokemons"/>
 
 </LinearLayout>

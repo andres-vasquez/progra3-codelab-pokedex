@@ -7,4 +7,5 @@
     <string name="drawer_button_my_favorites">Mis Favoritos</string>
     <string name="drawer_open">Open Drawer</string>
     <string name="drawer_close">Close Drawer</string>
+    <string name="pokemon_list_activity_title">Mis Pokemones</string>
 </resources>

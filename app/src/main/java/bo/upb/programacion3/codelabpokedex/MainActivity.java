@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void goToMyPokemons(View view) {
-        Intent intent = new Intent();
+        Intent intent = new Intent(this, PokemonListActivity.class);
         startActivity(intent);
     }
 

@@ -1,31 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@drawable/round_box"
-    android:gravity="center_horizontal"
     android:orientation="vertical"
     android:padding="15dp">
 
-    <ImageView
-        android:id="@+id/imageViewPokemon"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        tools:src="@drawable/bulbasaur" />
-
-    <TextView
-        android:id="@+id/textViewName"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:textColor="@color/colorBlack"
-        tools:text="Pokemon Name Example" />
+        android:background="@drawable/round_box"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="15dp">
 
-    <TextView
-        android:id="@+id/textViewType"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        tools:text="Pokemon Type Example" />
-</LinearLayout>
+        <ImageView
+            android:id="@+id/imageViewPokemon"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:scaleType="centerInside"
+            tools:src="@drawable/bulbasaur" />
+
+        <TextView
+            android:id="@+id/textViewName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/colorBlack"
+            android:textSize="18sp"
+            tools:text="Pokemon Name Example" />
+
+        <TextView
+            android:id="@+id/textViewType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="17sp"
+            tools:text="Pokemon Type Example" />
+    </LinearLayout>
+</FrameLayout>
