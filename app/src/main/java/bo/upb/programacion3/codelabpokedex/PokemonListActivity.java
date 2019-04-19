@@ -1,11 +1,9 @@
 package bo.upb.programacion3.codelabpokedex;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.AdapterView;
@@ -16,8 +14,6 @@ import com.google.gson.Gson;
 import java.util.List;
 
 import bo.upb.programacion3.codelabpokedex.adapters.PokemonListViewAdapter;
-import bo.upb.programacion3.codelabpokedex.adapters.PokemonRecyclerViewAdapter;
-import bo.upb.programacion3.codelabpokedex.callback.PokemonCallback;
 import bo.upb.programacion3.codelabpokedex.model.Pokemon;
 import bo.upb.programacion3.codelabpokedex.utils.PokemonUtils;
 
@@ -54,7 +50,7 @@ public class PokemonListActivity extends AppCompatActivity {
     }
 
     private void initToolbar() {
-        toolbar.setTitle(R.string.pokemon_list_activity_title);
+        toolbar.setTitle(R.string.pokemon_favorites_activity_title);
         toolbar.setTitleTextColor(ContextCompat.getColor(this, R.color.colorWhite));
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
