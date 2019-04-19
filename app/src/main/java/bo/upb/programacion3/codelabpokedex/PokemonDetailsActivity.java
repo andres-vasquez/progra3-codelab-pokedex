@@ -29,7 +29,6 @@ public class PokemonDetailsActivity extends AppCompatActivity {
         this.typeTextView = findViewById(R.id.typeTextView);
     }
 
-
     private void fillPokemonData() {
 
     }
