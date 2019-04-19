@@ -2,6 +2,66 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:background="@drawable/pokedex">
 
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/pokemonImage"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="120dp"
+            android:adjustViewBounds="true"
+            android:paddingStart="75dp"
+            android:paddingLeft="75dp"
+            android:src="@drawable/pikachu" />
+
+        <TextView
+            android:id="@+id/idTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="35dp"
+            android:paddingStart="75dp"
+            android:paddingLeft="75dp"
+            android:text="1"
+            android:textSize="32sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/nameTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="120dp"
+            android:gravity="center"
+            android:paddingEnd="75dp"
+            android:paddingRight="75dp"
+            android:text="Picachu"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/typeTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/nameTextView"
+            android:gravity="center"
+            android:paddingEnd="75dp"
+            android:paddingRight="75dp"
+            android:text="Electric"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
 </LinearLayout>
